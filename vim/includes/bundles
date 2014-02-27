@@ -1,0 +1,13 @@
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdtree'
+Bundle 'arnaud-lb/vim-php-namespace'
+Bundle 'kien/ctrlp.vim'
+Bundle 'msanders/snipmate.vim'
+
+" ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+
+

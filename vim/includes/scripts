@@ -1,0 +1,10 @@
+" symfony namespace plugin stuff
+noremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u :call PhpInsertUse()<CR>
+
+inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
+noremap <Leader>e :call PhpExpandClass()<CR>
+
+" snipMate
+let g:snips_author = "Nick Todd <nick@igniso.com>"
+
