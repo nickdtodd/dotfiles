@@ -28,5 +28,10 @@ set hlsearch
 colorscheme symfony
 set background=dark
 
+" Load macvim stuff if required
+if has("gui_macvim")
+    source ~/.vim/includes/macvim
+endif
+
 " Load scripts
 source ~/.vim/includes/scripts
