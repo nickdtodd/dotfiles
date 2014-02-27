@@ -6,6 +6,7 @@ Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'kien/ctrlp.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'evidens/vim-twig'
+Bundle 'chase/vim-ansible-yaml'
 
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
