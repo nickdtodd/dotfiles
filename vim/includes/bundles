@@ -5,6 +5,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'kien/ctrlp.vim'
 Bundle 'msanders/snipmate.vim'
+Bundle 'evidens/vim-twig'
 
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
