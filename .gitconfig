@@ -1,0 +1,13 @@
+[user]
+    name = Nick Todd 
+    email = nick@igniso.com
+[alias]
+    ci = commit
+    st = status
+    br = branch
+    co = checkout
+[color]
+    ui = auto
+[core]
+    editor = /usr/bin/vim
+    excludesfile = ~/.gitignore
