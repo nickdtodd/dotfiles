@@ -2,8 +2,8 @@
 
 #ls ones
 if [ "$(uname)" == "Darwin" ]; then
-    alias ll='ls -lF --color=auto'
-    alias la='ls -alF --color=auto'
+    alias ll='ls -lF'
+    alias la='ls -alF'
 else
     alias ll='ls -lF --color=auto'
     alias la='ls -alF --color=auto'
