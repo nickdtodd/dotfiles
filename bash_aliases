@@ -10,6 +10,8 @@ else
 fi
 
 alias ls='ls -F'
+# alias to get vagrant working. Should be in bashrc?
+alias fixvag='sudo /Library/StartupItems/VirtualBox/VirtualBox restart'
 
 
 # Git
