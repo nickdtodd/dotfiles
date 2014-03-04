@@ -16,3 +16,8 @@ alias fixvag='sudo /Library/StartupItems/VirtualBox/VirtualBox restart'
 
 # Git
 alias gai='git add --interactive'
+
+# Other mac aliases
+if [ "$(uname)" == "Darwin" ]; then
+    alias ctags="`brew --prefix`/usr/bin/ctags"
+fi
