@@ -8,9 +8,13 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'evidens/vim-twig'
 Bundle 'chase/vim-ansible-yaml'
 Bundle 'tpope/vim-fugitive'
+Bundle 'docteurklein/vim-symfony'
 
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+" vim-symfony
+let g:symfony_app_console_caller= "php"
+let g:symfony_app_console_path= "app/console"
 
 
