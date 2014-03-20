@@ -9,6 +9,7 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="bashrc vimrc vim muttrc bash_aliases tmux.conf gitconfig"    # list of files/folders to symlink in homedir
+snippets_folder=~/dotfiles/snippets/*.*
 
 ##########
 
@@ -30,3 +31,10 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
                 
+# move my snippets into snippets folder
+echo -n "Create snippets directory"
+mkdir ~/.vim/snippets
+for snippet in $(ls -d $snippets_folder); do
+    echo -n "Linking snippets"
+    ln -s $snippet ~/.vim/snippets
+done

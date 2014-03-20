@@ -1,0 +1,15 @@
+# symfony class
+snippet sclass
+	<?php
+
+	namespace `substitute(substitute(expand("%:h"), 'src/', '', ''), '/', '\\\', 'g')`;
+
+	/**
+	* ${1}
+	*
+	* @author `g:snips_author`
+	*/
+	Class ${2:`Filename('', 'myClass')`}
+	{
+	    ${3}
+	}
