@@ -9,6 +9,7 @@ Bundle 'evidens/vim-twig'
 Bundle 'chase/vim-ansible-yaml'
 Bundle 'tpope/vim-fugitive'
 Bundle 'docteurklein/vim-symfony'
+Bundle 'joonty/vdebug.git'
 
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
