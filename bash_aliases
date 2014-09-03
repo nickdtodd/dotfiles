@@ -21,3 +21,5 @@ alias gai='git add --interactive'
 if [ "$(uname)" == "Darwin" ]; then
     alias ctags="`brew --prefix`/usr/bin/ctags"
 fi
+
+alias grep='grep --color'
