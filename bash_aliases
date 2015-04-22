@@ -1,7 +1,7 @@
 # My bash aliases
 
 #ls ones
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
     alias ll='ls -lF'
     alias la='ls -alF'
 else
@@ -18,7 +18,7 @@ alias fixvag='sudo /Library/StartupItems/VirtualBox/VirtualBox restart'
 alias gai='git add --interactive'
 
 # Other mac aliases
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
     alias ctags="`brew --prefix`/usr/bin/ctags"
 fi
 
