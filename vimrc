@@ -35,3 +35,6 @@ endif
 
 " Load scripts
 source ~/.vim/includes/scripts
+
+" Open NERDTree on start
+au VimEnter *  NERDTree
