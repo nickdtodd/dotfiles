@@ -1,9 +1,11 @@
 " Always needed
 set nocompatible
+set shell=bash
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 source ~/.vim/includes/bundles
+call vundle#end()
 filetype plugin indent on
 
 " remap jj to escape
@@ -25,7 +27,8 @@ set incsearch
 set hlsearch
 
 " Colourschemes
-colorscheme symfony
+let g:solarized_termcolors=256
+colorscheme solarized
 set background=dark
 
 " Load macvim stuff if required
