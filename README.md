@@ -13,4 +13,4 @@ You make need to `chmod +x makesymlinks.sh` to make it executable.
 
 run `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`. Vundle will handle all the bundles.
 
-Next run `vim +BundleInstall +qall` to install the bundles.
+Next run `vim +PluginInstall +qall` to install the bundles.
