@@ -40,4 +40,4 @@ endif
 source ~/.vim/includes/scripts
 
 " Open NERDTree on start
-au VimEnter *  NERDTree
+au VimEnter *  NERDTree | wincmd p
