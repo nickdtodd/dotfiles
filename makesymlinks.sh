@@ -10,6 +10,7 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="bashrc vimrc vim muttrc bash_aliases tmux.conf gitconfig gitignore zshrc"    # list of files/folders to symlink in homedir
 snippets_folder=~/dotfiles/snippets/*.*
+fish_folder=~/dotfiles/fish/*.*
 
 ##########
 
@@ -37,4 +38,11 @@ mkdir ~/.vim/snippets
 for snippet in $(ls -d $snippets_folder); do
     echo -n "Linking snippets"
     ln -s $snippet ~/.vim/snippets
+done
+
+# fish related stuff
+echo -n "Creating fish directories"
+mkdir -p ~/.config/fish/functions
+for fishfile in $(ls -d $fish_folder); do
+    echo -n $fishfile
 done
