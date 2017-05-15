@@ -4,3 +4,4 @@
 testfiles/
 .vagrant/
 venv/
+app/config/parameters.*
