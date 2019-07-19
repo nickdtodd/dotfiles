@@ -1,24 +1,45 @@
-set fish_git_dirty_color red
-set fish_git_not_dirty_color green
+function fish_prompt --description 'Write out the prompt'
+	set laststatus $status
 
-function parse_git_branch
-    set -l branch (git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1/')
-    set -l git_diff (git diff)
+    if set -l git_branch (command git symbolic-ref HEAD 2>/dev/null | string replace refs/heads/ '')
+        set git_branch (set_color -o blue)"$git_branch"
+        if command git diff-index --quiet HEAD --
+            if set -l count (command git rev-list --count --left-right $upstream...HEAD 2>/dev/null)
+                echo $count | read -l ahead behind
+                if test "$ahead" -gt 0
+                    set git_status "$git_status"(set_color red)⬆
+                end
+                if test "$behind" -gt 0
+                    set git_status "$git_status"(set_color red)⬇
+                end
+            end
+            for i in (git status --porcelain | string sub -l 2 | uniq)
+                switch $i
+                    case "."
+                        set git_status "$git_status"(set_color green)✚
+                    case " D"
+                        set git_status "$git_status"(set_color red)✖
+                    case "*M*"
+                        set git_status "$git_status"(set_color green)✱
+                    case "*R*"
+                        set git_status "$git_status"(set_color purple)➜
+                    case "*U*"
+                        set git_status "$git_status"(set_color brown)═
+                    case "??"
+                        set git_status "$git_status"(set_color red)≠
+                end
+            end
+        else
+            set git_status (set_color green):
+        end
+        set git_info "(git$git_status$git_branch"(set_color white)")"
+    end
 
-    if test -n "$git_diff"
-        echo (set_color $fish_git_dirty_color)$branch(set_color normal)
+    set_color -b black
+    printf '%s%s%s%s%s%s%s%s%s%s%s%s%s' (set_color -o white) '❰' (set_color green) $USER (set_color white) '❙' (set_color yellow) (echo $PWD | sed -e "s|^$HOME|~|") (set_color white) $git_info (set_color white) '❱' (set_color white)
+    if test $laststatus -eq 0
+        printf "%s✔%s≻%s " (set_color -o green) (set_color white) (set_color normal)
     else
-        echo (set_color $fish_git_not_dirty_color)$branch(set_color normal)
+        printf "%s✘%s≻%s " (set_color -o red) (set_color white) (set_color normal)
     end
 end
-
-function fish_prompt
-    set -l git_dir (git rev-parse --git-dir 2> /dev/null)
-
-    if test -n "$git_dir"
-        printf '%s%s%s(%s)> ' (set_color $fish_color_cwd) (prompt_pwd) (set_color normal) (parse_git_branch)
-    else
-        printf '%s%s%s> ' (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
-    end
-end
-
