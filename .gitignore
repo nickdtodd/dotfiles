@@ -1,2 +1,4 @@
 vim/bundle/
 *.pyc
+vim/autoload/plug.vim
+vim/plugged/*
