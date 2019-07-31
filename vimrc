@@ -3,9 +3,9 @@ set nocompatible
 set shell=bash
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 source ~/.vim/includes/bundles
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 " remap jj to escape
