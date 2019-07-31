@@ -1,16 +1,16 @@
 " let Vundle manage Vundle
 " required! 
-Plugin 'gmarik/vundle'
-Plugin 'scrooloose/nerdtree'
-Plugin 'arnaud-lb/vim-php-namespace'
-Plugin 'kien/ctrlp.vim'
-Plugin 'msanders/snipmate.vim'
-Plugin 'evidens/vim-twig'
-Plugin 'chase/vim-ansible-yaml'
-Plugin 'tpope/vim-fugitive'
-Plugin 'docteurklein/vim-symfony'
-Plugin 'joonty/vdebug.git'
-Plugin 'altercation/vim-colors-solarized'
+Plug 'gmarik/vundle'
+Plug 'scrooloose/nerdtree'
+Plug 'arnaud-lb/vim-php-namespace'
+Plug 'kien/ctrlp.vim'
+Plug 'msanders/snipmate.vim'
+Plug 'evidens/vim-twig'
+Plug 'chase/vim-ansible-yaml'
+Plug 'tpope/vim-fugitive'
+Plug 'docteurklein/vim-symfony'
+Plug 'joonty/vdebug.git'
+Plug 'altercation/vim-colors-solarized'
 
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
